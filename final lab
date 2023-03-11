@@ -1,0 +1,16 @@
+from flask import Flask,request,jsonify
+
+app =Flask(_name_)
+
+@app.route('/api/user')
+def get_user():
+#Retrieve user data from the database
+user =db.execute ('SELECT *FROM users WHERE id =%s',request.a
+
+#Return the user data
+return jsonify({
+'id':user.id,
+'name':user.name,
+'email':user.email,
+'password':user.password
+})
